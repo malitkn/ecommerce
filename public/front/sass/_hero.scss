@@ -1,127 +1,203 @@
 /*---------------------
   Hero
 -----------------------*/
-.hero__slider {
+.hero {
+    padding-bottom: 50px;
 
-    &.owl-carousel {
+    &.hero-normal {
+        padding-bottom: 30px;
 
-        .owl-item {
-
-            &.active {
-
-                .hero__text {
-
-                    h6 {
-                        top: 0;
-                        opacity: 1;
-                    }
-
-                    h2 {
-                        top: 0;
-                        opacity: 1;
-                    }
-
-                    p {
-                        top: 0;
-                        opacity: 1;
-                    }
-
-                    .primary-btn {
-                        top: 0;
-                        opacity: 1;
-                    }
-                }
+        .hero__categories {
+            position: relative;
+            ul {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 46px;
+                width: 100%;
+                z-index: 9;
+                background: $white-color;
             }
         }
 
-        .owl-nav {
+        .hero__search {
+            margin-bottom: 0;
+        }
+    }
+}
 
-            button {
-                font-size: 36px;
-                color: #333333;
-                position: absolute;
-                left: 75px;
-                top: 50%;
-                margin-top: -18px;
-                line-height: 29px;
+.hero__categories__all {
+    background: $primary-color;
+    position: relative;
+    padding: 10px 25px 10px 40px;
+    cursor: pointer;
 
-                &.owl-next {
-                    left: auto;
-                    right: 75px;
-                }
+    i {
+        font-size: 16px;
+        color: $white-color;
+        margin-right: 10px;
+    }
+
+    span {
+        font-size: 18px;
+        font-weight: 700;
+        color: $white-color;
+    }
+
+    &:after {
+        position: absolute;
+        right: 18px;
+        top: 9px;
+        content: '\33';
+        font-family: 'ElegantIcons';
+        font-size: 18px;
+        color: $white-color;
+    }
+}
+
+.hero__categories {
+
+    ul {
+        border: 1px solid $border;
+        padding-left: 40px;
+        padding-top: 10px;
+        padding-bottom: 12px;
+
+        li {
+            list-style: none;
+
+            a {
+                font-size: 16px;
+                color: $normal-color;
+                line-height: 39px;
+                display: block;
             }
         }
     }
 }
 
-.hero__items {
-    height: 800px;
-    padding-top: 230px;
+.hero__search {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.hero__search__form {
+    width: 610px;
+    height: 50px;
+    border: 1px solid $border;
+    position: relative;
+    float: left;
+
+    form {
+
+        .hero__search__categories {
+            width: 30%;
+            float: left;
+            font-size: 16px;
+            color: $normal-color;
+            font-weight: 700;
+            padding-left: 18px;
+            padding-top: 11px;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                right: 0;
+                top: 14px;
+                height: 20px;
+                width: 1px;
+                background: $black-color;
+                opacity: .1;
+                content: "";
+            }
+
+            span {
+                position: absolute;
+                right: 14px;
+                top: 14px;
+            }
+        }
+
+        input {
+            width: 70%;
+            border: none;
+            height: 48px;
+            font-size: 16px;
+            color: #b2b2b2;
+            padding-left: 20px;
+
+            &::placeholder {
+                color: #b2b2b2;
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 0;
+            top: -1px;
+            height: 50px;
+        }
+    }
+}
+
+.hero__search__phone {
+    float: right;
+}
+
+.hero__search__phone__icon {
+    font-size: 18px;
+    color: $primary-color;
+    height: 50px;
+    width: 50px;
+    background: $background;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+.hero__search__phone__text {
+    overflow: hidden;
+
+    h5 {
+        color: $normal-color;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    span {
+        font-size: 14px;
+        color: $para-color;
+    }
+}
+
+.hero__item {
+    height: 431px;
+    display: flex;
+    align-items: center;
+    padding-left: 75px;
 }
 
 .hero__text {
 
-    h6 {
-        color: $primary-color;
+    span {
         font-size: 14px;
-        font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 28px;
-        position: relative;
-        top: 100px;
-        opacity: 0;
-        @include transition(all, .3s);
+        font-weight: 700;
+        letter-spacing: 4px;
+        color: $primary-color;
     }
 
     h2 {
-        color: $heading-color;
-        font-size: 48px;
+        font-size: 46px;
+        color: $heading-color-2;
+        line-height: 52px;
         font-weight: 700;
-        line-height: 58px;
-        margin-bottom: 30px;
-        position: relative;
-        top: 100px;
-        opacity: 0;
-        @include transition(all, .6s);
+        margin: 10px 0;
     }
 
     p {
-        font-size: 16px;
-        line-height: 28px;
         margin-bottom: 35px;
-        position: relative;
-        top: 100px;
-        opacity: 0;
-        @include transition(all, .9s);
-    }
-
-    .primary-btn {
-        position: relative;
-        top: 100px;
-        opacity: 0;
-        @include transition(all, 1.1s);
-
-        span {
-            font-size: 20px;
-            position: relative;
-            top: 4px;
-            font-weight: 700;
-        }
-    }
-}
-
-.hero__social {
-    margin-top: 190px;
-
-    a {
-        font-size: 16px;
-        color: #3d3d3d;
-        display: inline-block;
-        margin-right: 32px;
-
-        &:last-child {
-            margin-right: 0;
-        }
     }
 }

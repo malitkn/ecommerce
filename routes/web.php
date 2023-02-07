@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Front\Account\OrderController;
+use App\Http\Controllers\Front\ContactController;
+use App\Http\Controllers\Front\DashboardController;
+use App\Http\Controllers\Front\ShopController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,18 +18,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', [DashboardController::class, 'index'])->name('home');
+Route::get('/shop',[ShopController::class,'index'])->name('shop');
+Route::get('/contact',[ContactController::class,'index'])->name('contact');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::prefix('/account')->name('account.')->group(function () {
+
+        Route::prefix('/my-orders')->name('my-orders.')->group(function () {
+            Route::get('/', [OrderController::class, 'index'])->name('index');
+        });
+
+    });
+
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

@@ -13,11 +13,11 @@ use Illuminate\View\View;
 class AuthenticatedSessionController extends Controller
 {
     /**
-     * Display the login view.
+     * Display the User login view.
      */
     public function create(): View
     {
-        return view('auth.login');
+        return view('front.auth.login');
     }
 
     /**
@@ -26,8 +26,8 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request): RedirectResponse
     {
         $request->authenticate();
-
         $request->session()->regenerate();
+
 
         return redirect()->intended(RouteServiceProvider::HOME);
     }

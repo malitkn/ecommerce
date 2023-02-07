@@ -2,102 +2,120 @@
   Blog Sidebar
 -----------------------*/
 .blog__sidebar {
-
+    padding-top: 50px;
 }
 
 .blog__sidebar__item {
-    text-align: center;
-    margin-bottom: 65px;
+    margin-bottom: 50px;
 
-    &:last-child {
-        margin-bottom: 0;
+    h4 {
+        color: $normal-color;
+        font-weight: 700;
+        margin-bottom: 25px;
     }
 
-    form {
+    ul {
 
-        input {
-            height: 50px;
-            font-size: 15px;
-            color: #444444;
-            padding-left: 20px;
-            border: 1px solid #e1e1e1;
-            width: 100%;
-            margin-bottom: 20px;
+        li {
+            list-style: none;
 
-            &::placeholder {
-                color: #444444;
+            a {
+                font-size: 16px;
+                color: #666666;
+                line-height: 48px;
+                @include transition(all, .3s);
+
+                &:hover {
+                    color: $primary-color;
+                }
             }
         }
     }
 }
 
-.blog__sidebar__title {
-    text-align: center;
-    margin-bottom: 35px;
+.blog__sidebar__search {
+    margin-bottom: 50px;
 
-    h4 {
-        color: $heading-color;
-        font-weight: 700;
+    form {
         position: relative;
-        padding-bottom: 20px;
 
-        &::before {
+        input {
+            width: 100%;
+            height: 46px;
+            font-size: 16px;
+            color: $para-color;
+            padding-left: 15px;
+            border: 1px solid #e1e1e1;
+            border-radius: 20px;
+
+            &::placeholder {
+                color: $para-color;
+            }
+        }
+
+        button {
+            font-size: 16px;
+            color: $para-color;
+            background: transparent;
+            border: none;
             position: absolute;
-            left: 0;
             right: 0;
-            bottom: 0;
-            height: 5px;
-            width: 70px;
-            background: #e1e1e1;
-            content: "";
-            margin: 0 auto;
+            top: 0;
+            height: 100%;
+            padding: 0px 18px;
         }
     }
 }
 
-.blog__sidebar__social {
+.blog__sidebar__recent {
 
-    a {
-        display: inline-block;
-        font-size: 18px;
-        color: $heading-color;
-        width: 50px;
-        height: 50px;
-        background: #f2f2f2;
-        border-radius: 50%;
-        line-height: 50px;
-        text-align: center;
-        margin-right: 6px;
+    .blog__sidebar__recent__item {
+        display: block;
 
         &:last-child {
-            margin-right: 6px;
+            margin-bottom: 0;
         }
     }
 }
 
-.recent__item {
-    display: block;
+
+
+.blog__sidebar__recent__item {
     overflow: hidden;
-    margin-bottom: 25px;
-    text-align: left;
+    margin-bottom: 20px;
 }
 
-.recent__item__pic {
+.blog__sidebar__recent__item__pic {
     float: left;
-    margin-right: 25px;
+    margin-right: 20px;
 }
 
-.recent__item__text {
+.blog__sidebar__recent__item__text {
     overflow: hidden;
 
     h6 {
-        color: $heading-color;
-        line-height: 21px;
         font-weight: 700;
+        color: #333333;
+        line-height: 20px;
+        margin-bottom: 5px;
     }
 
     span {
-        font-size: 13px;
-        color: #888888;
+        font-size: 12px;
+        color: #999999;
+        text-transform: uppercase;
+    }
+}
+
+.blog__sidebar__item__tags {
+
+    a {
+        font-size: 16px;
+        color: $para-color;
+        background: $background;
+        display: inline-block;
+        padding: 7px 26px 5px;
+        margin-right: 6px;
+        margin-bottom: 10px;
     }
 }

@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('basket', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('sku_id');
             $table->integer('quantity');
             $table->timestamps();
 

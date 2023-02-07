@@ -14,15 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('variants', function (Blueprint $table) {
-            $table->id();
-            $table->primary(['attribute_id','sku_id']);
-            $table->unsignedBigInteger('sku_id');
-            $table->unsignedInteger('attribute_id');
-            $table->string('value');
-            $table->timestamps();
-
             $table->foreignId('attribute_id')->constrained()->cascadeOnDelete();
             $table->foreignId('sku_id')->constrained()->cascadeOnDelete();
+            $table->string('value');
+            $table->timestamps();
+            $table->primary(['attribute_id','sku_id']);
         });
     }
 

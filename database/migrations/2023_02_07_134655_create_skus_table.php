@@ -14,7 +14,6 @@ return new class extends Migration
     {
         Schema::create('skus', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product_id');
             $table->string('sku')->unique();
             $table->unsignedDecimal('price');
             $table->unsignedBigInteger('stock');

@@ -18,12 +18,12 @@ return new class extends Migration
             $table->string('title');
             $table->string('comment');
             $table->unsignedSmallInteger('rate');
-            $table->unsignedBigInteger('product_id');
-            $table->unsignedBigInteger('user_id');
             $table->ipAddress();
             $table->boolean('status');
-
             $table->timestamps();
+
+            $table->foreignId('product_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
         });
     }
 

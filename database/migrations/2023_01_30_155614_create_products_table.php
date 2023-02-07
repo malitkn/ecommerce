@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->unsignedInteger('category_id');
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->string('featured_image');
             $table->string('slug');
             $table->string('seo_title');
@@ -25,10 +25,8 @@ return new class extends Migration
             $table->string('seo_keywords');
             $table->boolean('status')->default(1);
             $table->boolean('featured')->default(0);
-
             $table->timestamps();
 
-            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
         });
     }
 

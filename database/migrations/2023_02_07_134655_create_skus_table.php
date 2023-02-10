@@ -14,12 +14,12 @@ return new class extends Migration
     {
         Schema::create('skus', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained()->cascadeOnDelete();
             $table->string('sku')->unique();
             $table->unsignedDecimal('price');
             $table->unsignedBigInteger('stock');
             $table->timestamps();
 
-            $table->foreignId('product_id')->constrained()->cascadeOnDelete();
         });
     }
 

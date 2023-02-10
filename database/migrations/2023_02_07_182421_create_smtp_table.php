@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('server');
             $table->string('email');
+            $table->string('username');
             $table->string('password');
             $table->integer('port');
+            $table->string('encryption');
             $table->timestamps();
         });
     }

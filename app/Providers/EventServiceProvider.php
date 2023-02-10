@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Sku;
+use App\Observers\SkuObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -27,7 +29,7 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Sku::observe(SkuObserver::class);
     }
 
     /**
@@ -35,7 +37,7 @@ class EventServiceProvider extends ServiceProvider
      *
      * @return bool
      */
-    public function shouldDiscoverEvents()
+    public function shouldDiscoverEvents(): bool
     {
         return false;
     }

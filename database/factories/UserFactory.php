@@ -18,10 +18,14 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->name(),
+            'name' => fake()->firstName('male'),
+            'surname' => fake()->lastName(),
+            'phone' => fake()->e164PhoneNumber(),
+            'gender' => 'male',
+            'birthday' => fake()->date('Y-m-d','1999-12-30'),
             'email' => fake()->safeEmail(),
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => bcrypt('12345'), // password
             'remember_token' => Str::random(10),
         ];
     }
@@ -31,7 +35,7 @@ class UserFactory extends Factory
      *
      * @return static
      */
-    public function unverified()
+    public function unverified(): static
     {
         return $this->state(function (array $attributes) {
             return [
@@ -39,4 +43,26 @@ class UserFactory extends Factory
             ];
         });
     }
+
+    public function admin(): UserFactory
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => 'admin',
+            ];
+        });
+    }
+
+    public function user(): UserFactory
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => 'user',
+            ];
+        });
+    }
+
+
+
+
 }

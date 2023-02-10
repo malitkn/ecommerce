@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->integer('parent');
+            $table->integer('parent')->default(0);
             $table->string('name');
             $table->string('slug');
-            $table->string('image');
-            $table->integer('order');
+            $table->string('image')->nullable();
+            $table->integer('order')->default(99);
             $table->timestamps();
         });
     }

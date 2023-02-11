@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('phone');
             $table->string('email');
             $table->text('maps');
+            $table->string('favicon');
+            $table->string('logo');
             $table->timestamps();
         });
     }

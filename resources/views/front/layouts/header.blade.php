@@ -2,6 +2,7 @@
 <html lang="tr">
 
 <head>
+    <!-- TODO Seo verileri buraya gelicek -->
     <meta charset="UTF-8">
     <meta name="description" content="Ogani Template">
     <meta name="keywords" content="Ogani, unica, creative, html">
@@ -24,7 +25,9 @@
     <link rel="stylesheet" href="{{ asset('front/css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('front/css/style.css') }}" type="text/css">
     @notifyCss
+    <!-- Custom Css -->
     @yield('css')
+    <!-- TODO Favicon kodları gelecek -->
 </head>
 
 <body>

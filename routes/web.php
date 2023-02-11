@@ -1,11 +1,13 @@
 <?php
 
-use App\Http\Controllers\Front\Account\OrderController;
+use App\Http\Controllers\Auth\OrderController;
+use App\Http\Controllers\Back\PanelController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\DashboardController;
 use App\Http\Controllers\Front\ShopController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +27,12 @@ Route::get('/contact',[ContactController::class,'index'])->name('contact');
 Route::middleware('auth')->group(function () {
 
     Route::prefix('/account')->name('account.')->group(function () {
-
         Route::prefix('/my-orders')->name('my-orders.')->group(function () {
             Route::get('/', [OrderController::class, 'index'])->name('index');
         });
+    });
+    Route::prefix('/admin')->name('admin.')->group(function () {
+       Route::get('/dashboard',[PanelController::class,'index'])->name('dashboard');
 
     });
 

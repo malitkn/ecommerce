@@ -1,0 +1,5 @@
+@extends('errors.layouts.master')
+@section('title','404 Aradığınız Sayfa Bulunamadı!')
+@section('color','primary')
+@section('code','404')
+@section('default-message','Aradığınız Sayfa Bulunamadı!')

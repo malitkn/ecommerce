@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Front\Account;
+namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,6 +11,6 @@ class OrderController extends Controller
 {
     public function index(): View
     {
-        return view('front.auth.account.my-orders');
+        return view('auth.my-orders');
     }
 }

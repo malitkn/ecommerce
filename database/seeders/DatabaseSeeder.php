@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             AttributeSeeder::class,
             VariantSeeder::class,
             SmtpSeeder::class,
+            AddressSeeder::class,
         ]);
     }
 }

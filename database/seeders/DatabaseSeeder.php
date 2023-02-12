@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
             SmtpSeeder::class,
             AddressSeeder::class,
             ShipmentSeeder::class,
+            OrderStatusSeeder::class,
         ]);
     }
 }

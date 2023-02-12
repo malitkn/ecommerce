@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             VariantSeeder::class,
             SmtpSeeder::class,
             AddressSeeder::class,
+            ShipmentSeeder::class,
         ]);
     }
 }

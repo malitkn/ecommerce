@@ -29,7 +29,6 @@ class DatabaseSeeder extends Seeder
             PageSeeder::class,
             AttributeSeeder::class,
             VariantSeeder::class,
-            SmtpSeeder::class,
             AddressSeeder::class,
             ShipmentSeeder::class,
             OrderStatusSeeder::class,

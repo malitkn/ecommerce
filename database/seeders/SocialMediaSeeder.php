@@ -33,6 +33,8 @@ class SocialMediaSeeder extends Seeder
                 'link' => $item['link'],
                 'icon' => $item['icon'],
                 'status' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
             ]);
         }
     }

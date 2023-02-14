@@ -15,6 +15,7 @@
 <!-- endinject -->
 <!-- Custom js for this page -->
 <script src=" {{ asset('back/assets/js/dashboard.js')}}"></script>
+@yield('js')
 <!-- End custom js for this page -->
 </body>
 </html>

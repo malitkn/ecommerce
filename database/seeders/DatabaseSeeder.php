@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Attribute;
+use App\Models\Favorite;
 use App\Models\ProductImage;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -21,9 +22,10 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             ProductSeeder::class,
             ProductImageSeeder::class,
-            SettingsSeeder::class,
+            SettingSeeder::class,
             SocialMediaSeeder::class,
             ContactSeeder::class,
+            CommentSeeder::class,
             PageSeeder::class,
             AttributeSeeder::class,
             VariantSeeder::class,
@@ -31,6 +33,7 @@ class DatabaseSeeder extends Seeder
             AddressSeeder::class,
             ShipmentSeeder::class,
             OrderStatusSeeder::class,
+            FavoriteSeeder::class,
         ]);
     }
 }

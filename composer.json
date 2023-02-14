@@ -6,11 +6,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "diglactic/laravel-breadcrumbs": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
-        "mckenziearts/laravel-notify": "^2.3"
+        "php-flasher/flasher-toastr-laravel": "^1.13"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

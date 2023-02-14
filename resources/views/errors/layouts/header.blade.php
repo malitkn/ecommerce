@@ -17,8 +17,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="{{ asset('Back/assets/css/style.css')}}">
     <!-- End layout styles -->
-    <!-- TODO Favicon kodları değiştirilecek -->
-    <link rel="shortcut icon" href="{{ asset('Back/assets/images/favicon.png')}}" />
+    <link rel="shortcut icon" href="{{ asset('storage/back/images/' . $settings->favicon) }}" />
 </head>
 <body>
 <div class="container-scroller">

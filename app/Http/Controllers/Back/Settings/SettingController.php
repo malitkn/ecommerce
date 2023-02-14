@@ -10,6 +10,8 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 class SettingController extends Controller
@@ -21,8 +23,7 @@ class SettingController extends Controller
      */
     public function index(): View
     {
-        $settings = Setting::find(1)->first();
-        return view('back.settings.index', compact('settings'));
+        return view('back.settings.index');
     }
 
 
@@ -60,6 +61,7 @@ class SettingController extends Controller
         $setting->email = $validated['email'];
         $setting->maps = $request->maps;
         $setting->save();
+        Artisan::call('optimize:clear');
         toastr()->addSuccess('Ayarlar başarıyla kaydedildi!','Başarılı!');
         return redirect()->back();
     }

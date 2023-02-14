@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="{{ asset('front/css/style.css') }}" type="text/css">
     <!-- Custom Css -->
     @yield('css')
-    <!-- TODO Favicon kodları gelecek -->
+
+    <link rel="shortcut icon" href="{{ asset('storage/back/images/' . $settings->favicon) }}" />
 </head>
 
 <body>

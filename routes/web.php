@@ -41,7 +41,7 @@ Route::middleware('auth')->group(function () {
 
             Route::prefix('/settings')->name('settings.')->group(function () {
                     Route::resource('/',SettingController::class)->only('index','store');
-                    
+                    Route::resource('/social-media',SocialMediaController::class);
             });
         });
     });

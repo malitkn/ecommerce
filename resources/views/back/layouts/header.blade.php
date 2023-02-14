@@ -19,7 +19,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href=" {{ asset('back/assets/css/style.css')}}">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href=" {{ asset('back/assets/images/favicon.png')}}"/>
+    <link rel="shortcut icon" href="{{ asset('storage/back/images/' . $settings->favicon) }}" />
     <!-- Custom Css -->
     @yield('css')
 </head>

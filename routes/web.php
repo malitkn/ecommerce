@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\OrderController;
 use App\Http\Controllers\Back\PanelController;
 use App\Http\Controllers\Back\Settings\SettingController;
+use App\Http\Controllers\Back\Settings\SocialMediaController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\ShopController;
@@ -39,7 +40,8 @@ Route::middleware('auth')->group(function () {
             Route::redirect('/','/admin/dashboard');
 
             Route::prefix('/settings')->name('settings.')->group(function () {
-                    Route::resource('/general',SettingController::class)->only('index','store');
+                    Route::resource('/',SettingController::class)->only('index','store');
+                    
             });
         });
     });

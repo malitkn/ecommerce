@@ -21,8 +21,8 @@ class SettingController extends Controller
      */
     public function index(): View
     {
-        $generalSettings = Setting::find(1)->first();
-        return view('back.settings.general.index', compact('generalSettings'));
+        $settings = Setting::find(1)->first();
+        return view('back.settings.index', compact('settings'));
     }
 
 

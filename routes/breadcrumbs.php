@@ -16,11 +16,6 @@ Breadcrumbs::for('dashboard', function (BreadcrumbTrail $trail) {
 // Home > Settings
 Breadcrumbs::for('settings', function (BreadcrumbTrail $trail) {
     $trail->parent('dashboard');
-    $trail->push('Ayarlar', '#');
+    $trail->push('Ayarlar', route('admin.settings.index'));
 });
 
-// Home > Settings > General
-Breadcrumbs::for('general', function (BreadcrumbTrail $trail) {
-    $trail->parent('settings');
-    $trail->push('Genel', route('admin.settings.general.index'));
-});

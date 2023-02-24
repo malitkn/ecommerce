@@ -19,3 +19,11 @@ Breadcrumbs::for('settings', function (BreadcrumbTrail $trail) {
     $trail->push('Ayarlar', route('admin.settings.index'));
 });
 
+// Home > Settings > Social Media
+Breadcrumbs::for('social-media', function (BreadcrumbTrail $trail) {
+    $trail->parent('settings');
+    $trail->push('Sosyal Medya', route('admin.settings.index'));
+});
+
+
+

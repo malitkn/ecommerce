@@ -47,18 +47,16 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#settings" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" data-toggle="collapse" href="#settings" aria-expanded="false" aria-controls="settings">
                 <span class="icon-bg"><i class="mdi mdi-settings menu-icon"></i></span>
                 <span class="menu-title">Ayarlar</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="settings" >
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.settings.index') }}">Genel Ayarlar</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.settings.social-media.index') }}"> Sosyal Medya Hesapları </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                    <li class="nav-item"> <a class="nav-link " href="{{ route('admin.settings.index') }}">Genel Ayarlar</a></li>
+                    <li class="nav-item"> <a class="nav-link " href="{{ route('admin.settings.social-media.index') }}"> Sosyal Medya Ayarları </a></li>
+
                 </ul>
             </div>
         </li>

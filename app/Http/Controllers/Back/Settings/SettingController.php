@@ -52,7 +52,6 @@ class SettingController extends Controller
             $setting->favicon = 'favicon.' . $favicon->extension();
         }
 
-
         $setting->title = $validated['title'];
         $setting->keywords = $request->keywords;
         $setting->description = $validated['description'];
@@ -61,8 +60,8 @@ class SettingController extends Controller
         $setting->email = $validated['email'];
         $setting->maps = $request->maps;
         $setting->save();
-        Artisan::call('optimize:clear');
-        toastr()->addSuccess('Ayarlar başarıyla kaydedildi!','Başarılı!');
+
+        toastr()->addSuccess('Ayarlar başarıyla kaydedildi!', 'Başarılı!');
         return redirect()->back();
     }
 

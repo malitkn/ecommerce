@@ -12,9 +12,13 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.11",
-        "php-flasher/flasher-toastr-laravel": "^1.13"
+        "php-flasher/flasher-toastr-laravel": "^1.13",
+        "spatie/laravel-backup": "^8.1"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.8",
+        "barryvdh/laravel-ide-helper": "^2.13",
+        "beyondcode/laravel-query-detector": "^1.7",
         "fakerphp/faker": "^1.9.1",
         "laravel/breeze": "^1.18",
         "laravel/sail": "^1.0.1",

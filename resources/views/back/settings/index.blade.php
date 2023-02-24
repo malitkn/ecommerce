@@ -2,8 +2,6 @@
 @section('title','Genel Ayarlar')
 
 @section('content')
-    <div class="main-panel">
-        <div class="content-wrapper">
             <div class="page-header">
                 <h3 class="page-title"> Genel Ayarlar </h3>
                 {{ Breadcrumbs::render('settings') }}
@@ -91,8 +89,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+
 @endsection
 
 @section('js')

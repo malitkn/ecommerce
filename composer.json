@@ -11,6 +11,7 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.11",
         "php-flasher/flasher-toastr-laravel": "^1.13"
     },
     "require-dev": {

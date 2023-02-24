@@ -9,13 +9,11 @@
     <link rel="stylesheet" href=" {{ asset('back/assets/vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href=" {{ asset('back/assets/vendors/flag-icon-css/css/flag-icon.min.css')}}">
     <link rel="stylesheet" href=" {{ asset('back/assets/vendors/css/vendor.bundle.base.css')}}">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
     <link rel="stylesheet" href=" {{ asset('back/assets/vendors/font-awesome/css/font-awesome.min.css')}}"/>
-    <link rel="stylesheet" href=" {{ asset('back/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css')}}">
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
+    <link rel="stylesheet" href=" {{ asset('back/assets/vendors/animate-css/animate.min.css')}}">
     <!-- endinject -->
+   <!-- Livewire -->
+    @livewireStyles
     <!-- Layout styles -->
     <link rel="stylesheet" href=" {{ asset('back/assets/css/style.css')}}">
     <!-- End layout styles -->
@@ -28,3 +26,5 @@
     @include('back.layouts.navbar')
     <div class="container-fluid page-body-wrapper">
         @include('back.layouts.sidebar')
+        <div class="main-panel">
+            <div class="content-wrapper">

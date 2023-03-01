@@ -64,6 +64,7 @@ class Edit extends Component
         $socialMedia->fill($data);
         $socialMedia->save();
 
-        toastr()->addSuccess('Hesap Başarıyla Düzenlendi!','Başarılı!');
+        $this->emit('edited', $socialMedia);
+        toastr()->addSuccess('Hesap Başarıyla Düzenlendi!', 'Başarılı!');
     }
 }

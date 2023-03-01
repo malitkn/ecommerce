@@ -15,7 +15,8 @@ class Index extends Component
 
     protected $listeners = [
         'toggleCreateForm' => 'toggleCreateForm',
-        'socialMediaCreated' => 'created',
+        'created' => 'created',
+        'edited' => 'edited',
     ];
 
 
@@ -41,6 +42,12 @@ class Index extends Component
     public function created(SocialMedia $data): void
     {
         $this->socialMedias->push($data);
+    }
+
+    public function edited(SocialMedia $socialMedia)
+    {
+        $editedSocialMedia = $this->socialMedias->find($socialMedia->id);
+        $editedSocialMedia = $socialMedia;
     }
 
     public function changeStatus($id): void

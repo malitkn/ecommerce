@@ -3,7 +3,7 @@
     <ul class="nav">
         <li class="nav-item nav-category">Main</li>
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{ route('admin.dashboard') }}">
                 <span class="icon-bg"><i class="mdi mdi-cube menu-icon"></i></span>
                 <span class="menu-title">Dashboard</span>
             </a>
@@ -45,6 +45,20 @@
                 <span class="icon-bg"><i class="mdi mdi-table-large menu-icon"></i></span>
                 <span class="menu-title">Tables</span>
             </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#orders" aria-expanded="false" aria-controls="orders">
+                <span class="icon-bg"><i class="mdi mdi-shopping menu-icon"></i></span>
+                <span class="menu-title">Siparişler</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="orders" >
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link " href="#">Siparişler</a></li>
+                    <li class="nav-item"> <a class="nav-link " href="{{ route('admin.orders.statuses.index') }}"> Sipariş Durumları </a></li>
+
+                </ul>
+            </div>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#settings" aria-expanded="false" aria-controls="settings">

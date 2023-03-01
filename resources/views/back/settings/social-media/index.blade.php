@@ -13,8 +13,8 @@
     </div>
     <div class="row">
         <livewire:back.settings.social-media.index/>
-        <livewire:back.settings.social-media.create wire:key="create-form"/>
-        <livewire:back.settings.social-media.edit wire:key="edit-form" />
+        <livewire:back.settings.social-media.create wire:key="create"/>
+        <livewire:back.settings.social-media.edit wire:key="edit" />
     </div>
 @endsection
 

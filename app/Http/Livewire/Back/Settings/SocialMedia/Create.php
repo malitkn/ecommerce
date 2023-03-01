@@ -63,8 +63,8 @@ class Create extends Component
 
         $socialMedia = SocialMedia::find($socialMedia->id);
 
-        $this->emit('socialMediaCreated', $socialMedia);
-        $this->resetExcept('show');
+        $this->emit('created', $socialMedia);
+        $this->resetExcept('show','columnClass');
         toastr()->addSuccess('Hesap Başarıyla Eklendi!','Başarılı!');
     }
 }

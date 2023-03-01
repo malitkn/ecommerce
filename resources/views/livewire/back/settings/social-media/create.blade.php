@@ -1,4 +1,5 @@
 <div class="col-lg-4 grid-margin {{ $columnClass }}">
+    <div>
     @if($show)
         <div class="card">
             <div class="d-flex justify-content-end">
@@ -27,5 +28,6 @@
             </div>
         </div>
     @endif
+    </div>
 </div>
 

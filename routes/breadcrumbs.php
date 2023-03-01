@@ -25,5 +25,18 @@ Breadcrumbs::for('social-media', function (BreadcrumbTrail $trail) {
     $trail->push('Sosyal Medya', route('admin.settings.index'));
 });
 
+// Home > Orders
+Breadcrumbs::for('orders', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push('Siparişler', route('admin.orders.index'));
+});
+
+// Home > Orders > Statuses
+Breadcrumbs::for('order-statuses', function (BreadcrumbTrail $trail) {
+    $trail->parent('orders');
+    $trail->push('Sipariş Durumları', route('admin.orders.statuses.index'));
+});
+
+
 
 

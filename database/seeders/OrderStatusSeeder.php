@@ -18,12 +18,21 @@ class OrderStatusSeeder extends Seeder
         DB::table('order_statuses')->insert([
             [
                 'name' => 'Hazırlanıyor',
+                'color' => 'info',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'name' => 'Kargoya Verildi',
+                'color' => 'warning',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'name' => 'Tamamlandı',
+                'color' => 'primary',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ]);
     }

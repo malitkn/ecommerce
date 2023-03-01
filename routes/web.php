@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\OrderController;
+use App\Http\Controllers\Back\Orders\OrderStatusController;
 use App\Http\Controllers\Back\PanelController;
 use App\Http\Controllers\Back\Settings\SettingController;
 use App\Http\Controllers\Back\Settings\SocialMediaController;
@@ -37,11 +38,18 @@ Route::middleware('auth')->group(function () {
     Route::middleware('admin')->group(function () {
         Route::prefix('/admin')->name('admin.')->group(function () {
             Route::get('/dashboard', [PanelController::class, 'index'])->name('dashboard');
-            Route::redirect('/','/admin/dashboard');
+            Route::redirect('/', '/admin/dashboard');
 
             Route::prefix('/settings')->name('settings.')->group(function () {
-                    Route::resource('/',SettingController::class)->only('index','store');
-                    Route::resource('/social-media',SocialMediaController::class);
+                Route::resource('/', SettingController::class)->only('index', 'store');
+                Route::get('/social-media', [SocialMediaController::class, 'index'])->name('social-media.index');
+            });
+
+            Route::prefix('/orders')->name('orders.')->group(function () {
+                Route::get('/',function () {
+                    echo "a";
+                })->name('index');
+                Route::get('/statuses', [OrderStatusController::class, 'index'])->name('statuses.index');
             });
         });
     });

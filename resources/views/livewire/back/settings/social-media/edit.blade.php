@@ -1,4 +1,5 @@
 <div class="modal fade @if($show) show @endif" @if($show) style="display: block;" @endif id="editModal" aria-labelledby="editModalLabel">
+   <div>
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -9,8 +10,6 @@
             </div>
             <div class="modal-body">
                 <form wire:submit.prevent="edit" class="forms-sample">
-
-                    <input type="hidden" name="id" wire:model.defer="socialMediaId">
 
                     <div class="form-group">
                         <label for="name">Sosyal Medya Adı</label>
@@ -33,5 +32,6 @@
             </div>
         </div>
     </div>
+   </div>
 </div>
 

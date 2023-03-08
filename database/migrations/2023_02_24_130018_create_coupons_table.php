@@ -12,13 +12,16 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('discounts', function (Blueprint $table) {
+        Schema::create('coupons', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', [0, 1]);
+            $table->enum('type', [0, 1])->comment('0: Net Tutar 1: Yüzde / Oran (%)');
             $table->string('code')->unique();
             $table->string('title');
             $table->unsignedDecimal('price');
+            $table->unsignedDecimal('min_basket_price');
             $table->unsignedDecimal('rate');
+            $table->integer('quantity');
+            $table->date('expires_at');
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('discounts');
+        Schema::dropIfExists('coupons');
     }
 };

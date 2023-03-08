@@ -9,10 +9,10 @@
         {{ Breadcrumbs::render('order-statuses') }}
     </div>
     <div class="row">
-        <livewire:back.orders.statuses.index wire:key="index" />
-        <livewire:back.orders.statuses.create wire:key="create" />
-        <livewire:back.orders.statuses.edit wire:key="edit" />
-        <livewire:back.orders.statuses.delete wire:key="delete" />
+        <livewire:back.order.status.index wire:key="index" />
+        <livewire:back.order.status.create wire:key="create" />
+        <livewire:back.order.status.edit wire:key="edit" />
+        <livewire:back.order.status.delete wire:key="delete" />
     </div>
 @endsection
 

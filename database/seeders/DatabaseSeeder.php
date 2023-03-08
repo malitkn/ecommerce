@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
             ShipmentSeeder::class,
             OrderStatusSeeder::class,
             FavoriteSeeder::class,
-            DiscountSeeder::class,
+            CouponSeeder::class,
             PaymentSeeder::class,
             OrderSeeder::class,
             OrderDetailSeeder::class,

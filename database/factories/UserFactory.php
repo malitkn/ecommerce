@@ -23,7 +23,7 @@ class UserFactory extends Factory
             'phone' => fake()->e164PhoneNumber(),
             'gender' => 'male',
             'birthday' => fake()->date('Y-m-d','1999-12-30'),
-            'email' => fake()->safeEmail(),
+            'email' => fake()->unique()->safeEmail,
             'email_verified_at' => now(),
             'password' => bcrypt('12345'), // password
             'remember_token' => Str::random(10),

@@ -60,6 +60,22 @@
                 </ul>
             </div>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#discount" aria-expanded="false" aria-controls="orders">
+                <span class="icon-bg"><i class="mdi mdi-sale menu-icon"></i></span>
+                <span class="menu-title">İndirim</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="discount" >
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link " href="{{ route('admin.discount.coupons.index') }}">Kuponlar</a></li>
+                    <li class="nav-item"> <a class="nav-link " href="#">Kampanyalar</a></li>
+
+                </ul>
+            </div>
+        </li>
+
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#settings" aria-expanded="false" aria-controls="settings">
                 <span class="icon-bg"><i class="mdi mdi-settings menu-icon"></i></span>

@@ -37,6 +37,18 @@ Breadcrumbs::for('order-statuses', function (BreadcrumbTrail $trail) {
     $trail->push('Sipariş Durumları', route('admin.orders.statuses.index'));
 });
 
+// Home > Discount
+Breadcrumbs::for('discount', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push('İndirim','#');
+});
+
+// Home > Discount > Coupons
+Breadcrumbs::for('coupons', function (BreadcrumbTrail $trail) {
+    $trail->parent('discount');
+    $trail->push('Kuponlar', route('admin.discount.coupons.index'));
+});
+
 
 
 

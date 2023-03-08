@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\OrderController;
+use App\Http\Controllers\Back\Discount\CouponController;
 use App\Http\Controllers\Back\Orders\OrderStatusController;
 use App\Http\Controllers\Back\PanelController;
 use App\Http\Controllers\Back\Settings\SettingController;
@@ -46,10 +47,14 @@ Route::middleware('auth')->group(function () {
             });
 
             Route::prefix('/orders')->name('orders.')->group(function () {
-                Route::get('/',function () {
+                Route::get('/', function () {
                     echo "a";
                 })->name('index');
                 Route::get('/statuses', [OrderStatusController::class, 'index'])->name('statuses.index');
+            });
+
+            Route::prefix('/discount')->name('discount.')->group(function () {
+                Route::get('/coupons', [CouponController::class, 'index'])->name('coupons.index');
             });
         });
     });

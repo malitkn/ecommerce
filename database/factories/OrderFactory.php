@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Discount;
+use App\Models\Coupon;
 use App\Models\OrderStatus;
 use App\Models\Payment;
 use App\Models\Shipment;
@@ -26,7 +26,7 @@ class OrderFactory extends Factory
             'shipment_id' => Shipment::all('id')->random(),
             'payment_id' => Payment::all('id')->random(),
             'order_status_id' => OrderStatus::all('id')->random(),
-            'discount_id' => Discount::all('id')->random(),
+            'discount_id' => Coupon::all('id')->random(),
             'shipping_address' => fake()->address,
             'invoice_address' => fake()->address,
             'shipment_price' => rand(1,30),

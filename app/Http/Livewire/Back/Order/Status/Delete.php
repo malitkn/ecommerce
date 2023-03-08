@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Back\Orders\Statuses;
+namespace App\Http\Livewire\Back\Order\Status;
 
 use App\Models\OrderStatus;
 use Illuminate\Contracts\View\View;
@@ -36,6 +36,6 @@ class Delete extends Component
 
     public function render(): View
     {
-        return view('livewire.back.orders.statuses.delete');
+        return view('livewire.back.order.status.delete');
     }
 }

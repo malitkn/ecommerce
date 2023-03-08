@@ -1,21 +1,22 @@
 <?php
 
-namespace App\Http\Livewire\Back\Orders\Statuses;
+namespace App\Http\Livewire\Back\Order\Status;
 
 use App\Models\OrderStatus;
+use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
 
-class Edit extends Component
+class Create extends Component
 {
-    public ?int $statusId = null;
     public string $name = '';
-    public string $color = 'Renk Seçin..';
-
+    public string $color;
     public array $colors = ['info', 'primary', 'secondary', 'success', 'danger', 'warning', 'light', 'dark', 'link'];
+
     public bool $show = false;
 
     protected $listeners = [
-        'showEditForm' => 'show',
+        'showCreateForm' => 'show',
     ];
 
     protected array $rules = [
@@ -23,12 +24,13 @@ class Edit extends Component
         'color' => 'required',
     ];
 
-    public function show(OrderStatus $orderStatus): void
+    public function render(): View
     {
-        $this->statusId = $orderStatus->id;
-        $this->name = $orderStatus->name;
-        $this->color = $orderStatus->color;
+        return view('livewire.back.order.status.create');
+    }
 
+    public function show(): void
+    {
         $this->show = true;
     }
 
@@ -40,22 +42,20 @@ class Edit extends Component
         $this->validateOnly($property);
     }
 
-    public function edit(): void
+    public function create(): void
     {
         $this->validate();
 
-        $status = OrderStatus::find($this->statusId);
+        $status = new OrderStatus();
         $status->name = $this->name;
         $status->color = $this->color;
         $status->save();
 
+        $status = OrderStatus::find($status->id);
 
-        $this->emit('edited', $status);
-        toastr()->addSuccess('Hesap Başarıyla Düzenlendi!', 'Başarılı!');
-    }
+        $this->emit('created', $status);
+        $this->reset('name');
 
-    public function render()
-    {
-        return view('livewire.back.orders.statuses.edit');
+        toastr()->addSuccess('Sipariş Durumu Oluşturuldu!', 'Başarılı!');
     }
 }

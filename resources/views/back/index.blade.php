@@ -1,8 +1,8 @@
 @extends('back.layouts.master')
 @section('title','Dashboard')
-@section('css')
+@push('custom-head')
     <link rel="stylesheet" href=" {{ asset('back/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css')}}">
-@endsection
+@endpush
 
 @section('content')
 
@@ -238,9 +238,9 @@
     </div>
 @endsection
 
-@section('js')
+@push('custom-footer')
     <script src="{{ asset('back/assets/vendors/chart.js/Chart.min.js')}}"></script>
     <script src="{{ asset('back/assets/vendors/jquery-circle-progress/js/circle-progress.min.js')}}"></script>
     <script src="{{ asset('back/assets/js/dashboard.js')}}"></script>
-@endsection
+@endpush
 

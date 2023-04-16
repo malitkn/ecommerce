@@ -7,13 +7,19 @@
     "require": {
         "php": "^8.0.2",
         "diglactic/laravel-breadcrumbs": "^8.1",
-        "guzzlehttp/guzzle": "^7.2",
+        "guzzlehttp/guzzle": "^7.5",
         "laravel/framework": "^9.19",
+        "laravel/horizon": "^5.15",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.11",
+        "php-flasher/flasher-sweetalert-laravel": "^1.13",
         "php-flasher/flasher-toastr-laravel": "^1.13",
-        "spatie/laravel-backup": "^8.1"
+        "predis/predis": "~1.0",
+        "spatie/laravel-backup": "^8.1",
+        "symfony/http-client": "^6.0",
+        "symfony/mailgun-mailer": "^6.0",
+        "unisharp/laravel-filemanager": "^2.6"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8",

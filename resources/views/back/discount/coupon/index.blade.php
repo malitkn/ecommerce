@@ -1,8 +1,8 @@
 @extends('back.layouts.master')
 @section('title', 'Kuponlar')
-@section('css')
+@push('custom-head')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
-@endsection
+@endpush
 @section('content')
     <div class="page-header">
         <h3 class="page-title"> İndirim Kuponları </h3>
@@ -16,7 +16,7 @@
     </div>
 @endsection
 
-@section('js')
+@push('custom-footer')
     <!-- Datepicker -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script>
@@ -28,7 +28,7 @@
             });
         });
     </script>
-@endsection
+@endpush
 
 
 

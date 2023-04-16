@@ -49,6 +49,19 @@ Breadcrumbs::for('coupons', function (BreadcrumbTrail $trail) {
     $trail->push('Kuponlar', route('admin.discount.coupons.index'));
 });
 
+// Home > Contacts
+Breadcrumbs::for('contacts', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push('İletişim Talepleri', route('admin.contacts.index'));
+});
+
+// Home > Categories
+Breadcrumbs::for('categories', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push('Kategoriler', route('admin.contacts.index'));
+});
+
+
 
 
 

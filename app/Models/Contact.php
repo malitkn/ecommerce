@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -31,4 +32,9 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
+
+    public function scopeTextLimit(Builder $query, $column, int $checkLength, $substrLength): string
+    {
+        return strlen($this->$column) > $checkLength ? substr($this->$column, 0, $substrLength) . '...' : $this->$column;
+    }
 }

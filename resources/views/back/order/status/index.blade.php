@@ -1,8 +1,6 @@
 @extends('back.layouts.master')
 @section('title','Sipariş Durumları')
-@section('css')
 
-@endsection
 @section('content')
     <div class="page-header">
         <h3 class="page-title"> Sipariş Durumları </h3>
@@ -16,6 +14,3 @@
     </div>
 @endsection
 
-@section('js')
-
-@endsection

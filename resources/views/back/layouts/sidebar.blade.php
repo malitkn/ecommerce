@@ -46,6 +46,14 @@
                 <span class="menu-title">Tables</span>
             </a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.contacts.index') }}">
+                <span class="icon-bg"><i class="mdi mdi-email menu-icon"></i></span>
+                <span class="menu-title">İletişim Talepleri</span>
+            </a>
+        </li>
+
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#orders" aria-expanded="false" aria-controls="orders">
                 <span class="icon-bg"><i class="mdi mdi-shopping menu-icon"></i></span>
@@ -56,6 +64,21 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link " href="#">Siparişler</a></li>
                     <li class="nav-item"> <a class="nav-link " href="{{ route('admin.orders.statuses.index') }}"> Sipariş Durumları </a></li>
+
+                </ul>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#product" aria-expanded="false" aria-controls="orders">
+                <span class="icon-bg"><i class="mdi mdi-shopping menu-icon"></i></span>
+                <span class="menu-title">Ürün</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="product" >
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link " href="#">Blank</a></li>
+                    <li class="nav-item"> <a class="nav-link " href="{{ route('admin.categories.index') }}">Kategoriler</a></li>
 
                 </ul>
             </div>

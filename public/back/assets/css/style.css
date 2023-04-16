@@ -12026,7 +12026,6 @@ code {
 .form-check {
   position: relative;
   display: block;
-  margin-top: 15px;
   margin-bottom: 10px;
   padding-left: 0; }
   .form-check .form-check-label {
@@ -14335,5 +14334,224 @@ dl {
     50% {
         -webkit-transform: scaleY(1.8);
         transform: scaleY(1.8); } }
+
+/* Pagination */
+.pagination .page-item .page-link, .jsgrid .jsgrid-pager .page-item .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a,
+.jsgrid .jsgrid-pager .jsgrid-pager-page a {
+    border-color: rgba(151, 151, 151, 0.3);
+    color: #a7afb7;
+    font-size: .875rem;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+.pagination .page-item .page-link:focus, .jsgrid .jsgrid-pager .page-item .page-link:focus, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link:focus, .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link:focus, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a:focus,
+.jsgrid .jsgrid-pager .jsgrid-pager-page a:focus {
+    background: inherit; }
+.pagination .page-item .page-link i:before, .jsgrid .jsgrid-pager .page-item .page-link i:before, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link i:before, .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link i:before, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a i:before, .jsgrid .jsgrid-pager .jsgrid-pager-page a i:before {
+    font-size: inherit;
+    line-height: 1;
+    vertical-align: middle; }
+
+.pagination .page-item.active .page-link, .jsgrid .jsgrid-pager .page-item.active .page-link, .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .pagination .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .page-item.active .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-item.active a, .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a,
+.pagination .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a,
+.jsgrid .jsgrid-pager .page-item.active .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item.active a,
+.jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .pagination .page-item:hover .page-link, .jsgrid .jsgrid-pager .page-item:hover .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:hover .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-page:hover .page-link, .pagination .page-item:hover .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .page-item:hover .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-item:hover a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:hover a,
+.pagination .page-item:hover .jsgrid .jsgrid-pager .jsgrid-pager-page a,
+.jsgrid .jsgrid-pager .page-item:hover .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item:hover a,
+.jsgrid .jsgrid-pager .jsgrid-pager-page:hover a, .pagination .page-item:focus .page-link, .jsgrid .jsgrid-pager .page-item:focus .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:focus .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-page:focus .page-link, .pagination .page-item:focus .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .page-item:focus .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-item:focus a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:focus a,
+.pagination .page-item:focus .jsgrid .jsgrid-pager .jsgrid-pager-page a,
+.jsgrid .jsgrid-pager .page-item:focus .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item:focus a,
+.jsgrid .jsgrid-pager .jsgrid-pager-page:focus a, .pagination .page-item:active .page-link, .jsgrid .jsgrid-pager .page-item:active .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:active .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-page:active .page-link, .pagination .page-item:active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .page-item:active .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-item:active a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:active a,
+.pagination .page-item:active .jsgrid .jsgrid-pager .jsgrid-pager-page a,
+.jsgrid .jsgrid-pager .page-item:active .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item:active a,
+.jsgrid .jsgrid-pager .jsgrid-pager-page:active a {
+    background: theme-color("primary");
+    border-color: theme-color("primary");
+    color: #ffffff; }
+
+.pagination.flat .page-item .page-link, .jsgrid .flat.jsgrid-pager .page-item .page-link, .pagination.flat .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination.flat .jsgrid-pager-nav-button .page-link, .jsgrid .flat.jsgrid-pager .jsgrid-pager-nav-button .page-link, .pagination.flat .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination.flat .jsgrid-pager-page .page-link, .jsgrid .flat.jsgrid-pager .jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination.flat .page-item a, .pagination.flat .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination.flat .jsgrid-pager-nav-button a, .jsgrid .flat.jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination.flat .page-item a,
+.pagination.flat .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination.flat .jsgrid-pager-page a,
+.jsgrid .flat.jsgrid-pager .jsgrid-pager-page a {
+    border: none;
+    border-radius: 2px; }
+
+.pagination.separated .page-item, .jsgrid .separated.jsgrid-pager .page-item, .pagination.separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button, .jsgrid .jsgrid-pager .pagination.separated .jsgrid-pager-nav-button, .jsgrid .separated.jsgrid-pager .jsgrid-pager-nav-button,
+.pagination.separated .jsgrid .jsgrid-pager .jsgrid-pager-page, .jsgrid .jsgrid-pager .pagination.separated .jsgrid-pager-page,
+.jsgrid .separated.jsgrid-pager .jsgrid-pager-page {
+    margin-left: 2px;
+    margin-right: 2px; }
+.pagination.separated .page-item:first-child, .jsgrid .separated.jsgrid-pager .page-item:first-child, .pagination.separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:first-child, .jsgrid .jsgrid-pager .pagination.separated .jsgrid-pager-nav-button:first-child, .jsgrid .separated.jsgrid-pager .jsgrid-pager-nav-button:first-child,
+.pagination.separated .jsgrid .jsgrid-pager .jsgrid-pager-page:first-child, .jsgrid .jsgrid-pager .pagination.separated .jsgrid-pager-page:first-child,
+.jsgrid .separated.jsgrid-pager .jsgrid-pager-page:first-child {
+    margin-left: 0; }
+.pagination.separated .page-item:last-child, .jsgrid .separated.jsgrid-pager .page-item:last-child, .pagination.separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:last-child, .jsgrid .jsgrid-pager .pagination.separated .jsgrid-pager-nav-button:last-child, .jsgrid .separated.jsgrid-pager .jsgrid-pager-nav-button:last-child,
+.pagination.separated .jsgrid .jsgrid-pager .jsgrid-pager-page:last-child, .jsgrid .jsgrid-pager .pagination.separated .jsgrid-pager-page:last-child,
+.jsgrid .separated.jsgrid-pager .jsgrid-pager-page:last-child {
+    margin-right: 0; }
+.pagination.separated .page-item .page-link, .jsgrid .separated.jsgrid-pager .page-item .page-link, .pagination.separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination.separated .jsgrid-pager-nav-button .page-link, .jsgrid .separated.jsgrid-pager .jsgrid-pager-nav-button .page-link, .pagination.separated .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination.separated .jsgrid-pager-page .page-link, .jsgrid .separated.jsgrid-pager .jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination.separated .page-item a, .pagination.separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination.separated .jsgrid-pager-nav-button a, .jsgrid .separated.jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination.separated .page-item a,
+.pagination.separated .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination.separated .jsgrid-pager-page a,
+.jsgrid .separated.jsgrid-pager .jsgrid-pager-page a {
+    border-radius: 2px; }
+
+.pagination.rounded .page-item:first-child .page-link, .pagination.loader-demo-box .page-item:first-child .page-link, .jsgrid .loader-demo-box.jsgrid-pager .page-item:first-child .page-link, .jsgrid .rounded.jsgrid-pager .page-item:first-child .page-link, .pagination.rounded .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:first-child .page-link, .jsgrid .jsgrid-pager .pagination.rounded .jsgrid-pager-nav-button:first-child .page-link, .pagination.loader-demo-box .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:first-child .page-link, .jsgrid .jsgrid-pager .pagination.loader-demo-box .jsgrid-pager-nav-button:first-child .page-link, .jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-nav-button:first-child .page-link, .jsgrid .rounded.jsgrid-pager .jsgrid-pager-nav-button:first-child .page-link, .pagination.rounded .jsgrid .jsgrid-pager .jsgrid-pager-page:first-child .page-link, .jsgrid .jsgrid-pager .pagination.rounded .jsgrid-pager-page:first-child .page-link, .pagination.loader-demo-box .jsgrid .jsgrid-pager .jsgrid-pager-page:first-child .page-link, .jsgrid .jsgrid-pager .pagination.loader-demo-box .jsgrid-pager-page:first-child .page-link, .jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-page:first-child .page-link, .jsgrid .rounded.jsgrid-pager .jsgrid-pager-page:first-child .page-link, .pagination.rounded .page-item:first-child .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination.rounded .page-item:first-child a, .pagination.loader-demo-box .page-item:first-child .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination.loader-demo-box .page-item:first-child a, .jsgrid .loader-demo-box.jsgrid-pager .page-item:first-child .jsgrid-pager-nav-button a, .jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-nav-button .page-item:first-child a, .jsgrid .rounded.jsgrid-pager .page-item:first-child .jsgrid-pager-nav-button a, .jsgrid .rounded.jsgrid-pager .jsgrid-pager-nav-button .page-item:first-child a, .pagination.rounded .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:first-child a, .jsgrid .jsgrid-pager .pagination.rounded .jsgrid-pager-nav-button:first-child a, .pagination.loader-demo-box .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:first-child a, .jsgrid .jsgrid-pager .pagination.loader-demo-box .jsgrid-pager-nav-button:first-child a, .jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-nav-button:first-child a, .jsgrid .rounded.jsgrid-pager .jsgrid-pager-nav-button:first-child a,
+.pagination.rounded .page-item:first-child .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination.rounded .page-item:first-child a,
+.pagination.loader-demo-box .page-item:first-child .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination.loader-demo-box .page-item:first-child a,
+.jsgrid .loader-demo-box.jsgrid-pager .page-item:first-child .jsgrid-pager-page a, .jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-page .page-item:first-child a,
+.jsgrid .rounded.jsgrid-pager .page-item:first-child .jsgrid-pager-page a, .jsgrid .rounded.jsgrid-pager .jsgrid-pager-page .page-item:first-child a,
+.pagination.rounded .jsgrid .jsgrid-pager .jsgrid-pager-page:first-child a, .jsgrid .jsgrid-pager .pagination.rounded .jsgrid-pager-page:first-child a,
+.pagination.loader-demo-box .jsgrid .jsgrid-pager .jsgrid-pager-page:first-child a, .jsgrid .jsgrid-pager .pagination.loader-demo-box .jsgrid-pager-page:first-child a,
+.jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-page:first-child a,
+.jsgrid .rounded.jsgrid-pager .jsgrid-pager-page:first-child a {
+    border-radius: 25px 0 0 25px; }
+
+.pagination.rounded .page-item:last-child .page-link, .pagination.loader-demo-box .page-item:last-child .page-link, .jsgrid .loader-demo-box.jsgrid-pager .page-item:last-child .page-link, .jsgrid .rounded.jsgrid-pager .page-item:last-child .page-link, .pagination.rounded .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:last-child .page-link, .jsgrid .jsgrid-pager .pagination.rounded .jsgrid-pager-nav-button:last-child .page-link, .pagination.loader-demo-box .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:last-child .page-link, .jsgrid .jsgrid-pager .pagination.loader-demo-box .jsgrid-pager-nav-button:last-child .page-link, .jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-nav-button:last-child .page-link, .jsgrid .rounded.jsgrid-pager .jsgrid-pager-nav-button:last-child .page-link, .pagination.rounded .jsgrid .jsgrid-pager .jsgrid-pager-page:last-child .page-link, .jsgrid .jsgrid-pager .pagination.rounded .jsgrid-pager-page:last-child .page-link, .pagination.loader-demo-box .jsgrid .jsgrid-pager .jsgrid-pager-page:last-child .page-link, .jsgrid .jsgrid-pager .pagination.loader-demo-box .jsgrid-pager-page:last-child .page-link, .jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-page:last-child .page-link, .jsgrid .rounded.jsgrid-pager .jsgrid-pager-page:last-child .page-link, .pagination.rounded .page-item:last-child .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination.rounded .page-item:last-child a, .pagination.loader-demo-box .page-item:last-child .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination.loader-demo-box .page-item:last-child a, .jsgrid .loader-demo-box.jsgrid-pager .page-item:last-child .jsgrid-pager-nav-button a, .jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-nav-button .page-item:last-child a, .jsgrid .rounded.jsgrid-pager .page-item:last-child .jsgrid-pager-nav-button a, .jsgrid .rounded.jsgrid-pager .jsgrid-pager-nav-button .page-item:last-child a, .pagination.rounded .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:last-child a, .jsgrid .jsgrid-pager .pagination.rounded .jsgrid-pager-nav-button:last-child a, .pagination.loader-demo-box .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:last-child a, .jsgrid .jsgrid-pager .pagination.loader-demo-box .jsgrid-pager-nav-button:last-child a, .jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-nav-button:last-child a, .jsgrid .rounded.jsgrid-pager .jsgrid-pager-nav-button:last-child a,
+.pagination.rounded .page-item:last-child .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination.rounded .page-item:last-child a,
+.pagination.loader-demo-box .page-item:last-child .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination.loader-demo-box .page-item:last-child a,
+.jsgrid .loader-demo-box.jsgrid-pager .page-item:last-child .jsgrid-pager-page a, .jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-page .page-item:last-child a,
+.jsgrid .rounded.jsgrid-pager .page-item:last-child .jsgrid-pager-page a, .jsgrid .rounded.jsgrid-pager .jsgrid-pager-page .page-item:last-child a,
+.pagination.rounded .jsgrid .jsgrid-pager .jsgrid-pager-page:last-child a, .jsgrid .jsgrid-pager .pagination.rounded .jsgrid-pager-page:last-child a,
+.pagination.loader-demo-box .jsgrid .jsgrid-pager .jsgrid-pager-page:last-child a, .jsgrid .jsgrid-pager .pagination.loader-demo-box .jsgrid-pager-page:last-child a,
+.jsgrid .loader-demo-box.jsgrid-pager .jsgrid-pager-page:last-child a,
+.jsgrid .rounded.jsgrid-pager .jsgrid-pager-page:last-child a {
+    border-radius: 0 25px 25px 0; }
+
+.pagination.rounded-flat .page-item, .jsgrid .rounded-flat.jsgrid-pager .page-item, .pagination.rounded-flat .jsgrid .jsgrid-pager .jsgrid-pager-nav-button, .jsgrid .jsgrid-pager .pagination.rounded-flat .jsgrid-pager-nav-button, .jsgrid .rounded-flat.jsgrid-pager .jsgrid-pager-nav-button,
+.pagination.rounded-flat .jsgrid .jsgrid-pager .jsgrid-pager-page, .jsgrid .jsgrid-pager .pagination.rounded-flat .jsgrid-pager-page,
+.jsgrid .rounded-flat.jsgrid-pager .jsgrid-pager-page {
+    margin-right: 3px;
+    margin-left: 3px; }
+.pagination.rounded-flat .page-item .page-link, .jsgrid .rounded-flat.jsgrid-pager .page-item .page-link, .pagination.rounded-flat .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination.rounded-flat .jsgrid-pager-nav-button .page-link, .jsgrid .rounded-flat.jsgrid-pager .jsgrid-pager-nav-button .page-link, .pagination.rounded-flat .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination.rounded-flat .jsgrid-pager-page .page-link, .jsgrid .rounded-flat.jsgrid-pager .jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination.rounded-flat .page-item a, .pagination.rounded-flat .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination.rounded-flat .jsgrid-pager-nav-button a, .jsgrid .rounded-flat.jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination.rounded-flat .page-item a,
+.pagination.rounded-flat .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination.rounded-flat .jsgrid-pager-page a,
+.jsgrid .rounded-flat.jsgrid-pager .jsgrid-pager-page a {
+    border: none;
+    border-radius: 50px; }
+
+.pagination.rounded-separated .page-item, .jsgrid .rounded-separated.jsgrid-pager .page-item, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-nav-button, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button,
+.pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-page, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-page,
+.jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page {
+    margin-left: 2px;
+    margin-right: 2px; }
+.pagination.rounded-separated .page-item:first-child, .jsgrid .rounded-separated.jsgrid-pager .page-item:first-child, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:first-child, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-nav-button:first-child, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button:first-child,
+.pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-page:first-child, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-page:first-child,
+.jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page:first-child {
+    margin-left: 0; }
+.pagination.rounded-separated .page-item:first-child .page-link, .jsgrid .rounded-separated.jsgrid-pager .page-item:first-child .page-link, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:first-child .page-link, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-nav-button:first-child .page-link, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button:first-child .page-link, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-page:first-child .page-link, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-page:first-child .page-link, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page:first-child .page-link, .pagination.rounded-separated .page-item:first-child .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination.rounded-separated .page-item:first-child a, .jsgrid .rounded-separated.jsgrid-pager .page-item:first-child .jsgrid-pager-nav-button a, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button .page-item:first-child a, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:first-child a, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-nav-button:first-child a, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button:first-child a,
+.pagination.rounded-separated .page-item:first-child .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination.rounded-separated .page-item:first-child a,
+.jsgrid .rounded-separated.jsgrid-pager .page-item:first-child .jsgrid-pager-page a, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page .page-item:first-child a,
+.pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-page:first-child a, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-page:first-child a,
+.jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page:first-child a {
+    border-radius: 10px 0 0 10px; }
+.pagination.rounded-separated .page-item:last-child, .jsgrid .rounded-separated.jsgrid-pager .page-item:last-child, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:last-child, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-nav-button:last-child, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button:last-child,
+.pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-page:last-child, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-page:last-child,
+.jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page:last-child {
+    margin-right: 0; }
+.pagination.rounded-separated .page-item:last-child .page-link, .jsgrid .rounded-separated.jsgrid-pager .page-item:last-child .page-link, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:last-child .page-link, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-nav-button:last-child .page-link, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button:last-child .page-link, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-page:last-child .page-link, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-page:last-child .page-link, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page:last-child .page-link, .pagination.rounded-separated .page-item:last-child .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination.rounded-separated .page-item:last-child a, .jsgrid .rounded-separated.jsgrid-pager .page-item:last-child .jsgrid-pager-nav-button a, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button .page-item:last-child a, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:last-child a, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-nav-button:last-child a, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button:last-child a,
+.pagination.rounded-separated .page-item:last-child .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination.rounded-separated .page-item:last-child a,
+.jsgrid .rounded-separated.jsgrid-pager .page-item:last-child .jsgrid-pager-page a, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page .page-item:last-child a,
+.pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-page:last-child a, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-page:last-child a,
+.jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page:last-child a {
+    border-radius: 0 10px 10px 0; }
+.pagination.rounded-separated .page-item .page-link, .jsgrid .rounded-separated.jsgrid-pager .page-item .page-link, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-nav-button .page-link, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button .page-link, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-page .page-link, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination.rounded-separated .page-item a, .pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-nav-button a, .jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination.rounded-separated .page-item a,
+.pagination.rounded-separated .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination.rounded-separated .jsgrid-pager-page a,
+.jsgrid .rounded-separated.jsgrid-pager .jsgrid-pager-page a {
+    border-radius: 2px; }
+
+/* pagination variations */
+.pagination-primary .page-item.active .page-link, .pagination-primary .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-primary .active.jsgrid-pager-nav-button .page-link, .pagination-primary .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-primary .active.jsgrid-pager-page .page-link, .pagination-primary .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-primary .page-item.active a, .pagination-primary .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-primary .active.jsgrid-pager-nav-button a,
+.pagination-primary .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-primary .page-item.active a,
+.pagination-primary .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-primary .active.jsgrid-pager-page a {
+    background: #0062ff;
+    border-color: #0062ff; }
+
+.pagination-primary .page-item .page-link:hover, .pagination-primary .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link:hover, .jsgrid .jsgrid-pager .pagination-primary .jsgrid-pager-nav-button .page-link:hover, .pagination-primary .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .pagination-primary .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-primary .page-item a:hover, .pagination-primary .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .pagination-primary .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-primary .page-item a:hover,
+.pagination-primary .jsgrid .jsgrid-pager .jsgrid-pager-page a:hover, .jsgrid .jsgrid-pager .pagination-primary .jsgrid-pager-page a:hover {
+    background: #1a72ff;
+    border-color: #0062ff;
+    color: #ffffff; }
+
+.pagination-secondary .page-item.active .page-link, .pagination-secondary .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-secondary .active.jsgrid-pager-nav-button .page-link, .pagination-secondary .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-secondary .active.jsgrid-pager-page .page-link, .pagination-secondary .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-secondary .page-item.active a, .pagination-secondary .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-secondary .active.jsgrid-pager-nav-button a,
+.pagination-secondary .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-secondary .page-item.active a,
+.pagination-secondary .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-secondary .active.jsgrid-pager-page a {
+    background: #8e94a9;
+    border-color: #8e94a9; }
+
+.pagination-secondary .page-item .page-link:hover, .pagination-secondary .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link:hover, .jsgrid .jsgrid-pager .pagination-secondary .jsgrid-pager-nav-button .page-link:hover, .pagination-secondary .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .pagination-secondary .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-secondary .page-item a:hover, .pagination-secondary .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .pagination-secondary .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-secondary .page-item a:hover,
+.pagination-secondary .jsgrid .jsgrid-pager .jsgrid-pager-page a:hover, .jsgrid .jsgrid-pager .pagination-secondary .jsgrid-pager-page a:hover {
+    background: #9ca2b4;
+    border-color: #8e94a9;
+    color: #ffffff; }
+
+.pagination-success .page-item.active .page-link, .pagination-success .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-success .active.jsgrid-pager-nav-button .page-link, .pagination-success .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-success .active.jsgrid-pager-page .page-link, .pagination-success .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-success .page-item.active a, .pagination-success .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-success .active.jsgrid-pager-nav-button a,
+.pagination-success .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-success .page-item.active a,
+.pagination-success .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-success .active.jsgrid-pager-page a {
+    background: #44ce42;
+    border-color: #44ce42; }
+
+.pagination-success .page-item .page-link:hover, .pagination-success .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link:hover, .jsgrid .jsgrid-pager .pagination-success .jsgrid-pager-nav-button .page-link:hover, .pagination-success .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .pagination-success .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-success .page-item a:hover, .pagination-success .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .pagination-success .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-success .page-item a:hover,
+.pagination-success .jsgrid .jsgrid-pager .jsgrid-pager-page a:hover, .jsgrid .jsgrid-pager .pagination-success .jsgrid-pager-page a:hover {
+    background: #58d356;
+    border-color: #44ce42;
+    color: #ffffff; }
+
+.pagination-info .page-item.active .page-link, .pagination-info .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-info .active.jsgrid-pager-nav-button .page-link, .pagination-info .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-info .active.jsgrid-pager-page .page-link, .pagination-info .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-info .page-item.active a, .pagination-info .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-info .active.jsgrid-pager-nav-button a,
+.pagination-info .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-info .page-item.active a,
+.pagination-info .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-info .active.jsgrid-pager-page a {
+    background: #a461d8;
+    border-color: #a461d8; }
+
+.pagination-info .page-item .page-link:hover, .pagination-info .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link:hover, .jsgrid .jsgrid-pager .pagination-info .jsgrid-pager-nav-button .page-link:hover, .pagination-info .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .pagination-info .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-info .page-item a:hover, .pagination-info .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .pagination-info .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-info .page-item a:hover,
+.pagination-info .jsgrid .jsgrid-pager .jsgrid-pager-page a:hover, .jsgrid .jsgrid-pager .pagination-info .jsgrid-pager-page a:hover {
+    background: #b075dd;
+    border-color: #a461d8;
+    color: #ffffff; }
+
+.pagination-warning .page-item.active .page-link, .pagination-warning .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-warning .active.jsgrid-pager-nav-button .page-link, .pagination-warning .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-warning .active.jsgrid-pager-page .page-link, .pagination-warning .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-warning .page-item.active a, .pagination-warning .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-warning .active.jsgrid-pager-nav-button a,
+.pagination-warning .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-warning .page-item.active a,
+.pagination-warning .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-warning .active.jsgrid-pager-page a {
+    background: #ffc542;
+    border-color: #ffc542; }
+
+.pagination-warning .page-item .page-link:hover, .pagination-warning .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link:hover, .jsgrid .jsgrid-pager .pagination-warning .jsgrid-pager-nav-button .page-link:hover, .pagination-warning .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .pagination-warning .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-warning .page-item a:hover, .pagination-warning .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .pagination-warning .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-warning .page-item a:hover,
+.pagination-warning .jsgrid .jsgrid-pager .jsgrid-pager-page a:hover, .jsgrid .jsgrid-pager .pagination-warning .jsgrid-pager-page a:hover {
+    background: #ffcd5c;
+    border-color: #ffc542;
+    color: #ffffff; }
+
+.pagination-danger .page-item.active .page-link, .pagination-danger .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-danger .active.jsgrid-pager-nav-button .page-link, .pagination-danger .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-danger .active.jsgrid-pager-page .page-link, .pagination-danger .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-danger .page-item.active a, .pagination-danger .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-danger .active.jsgrid-pager-nav-button a,
+.pagination-danger .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-danger .page-item.active a,
+.pagination-danger .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-danger .active.jsgrid-pager-page a {
+    background: #fc5a5a;
+    border-color: #fc5a5a; }
+
+.pagination-danger .page-item .page-link:hover, .pagination-danger .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link:hover, .jsgrid .jsgrid-pager .pagination-danger .jsgrid-pager-nav-button .page-link:hover, .pagination-danger .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .pagination-danger .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-danger .page-item a:hover, .pagination-danger .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .pagination-danger .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-danger .page-item a:hover,
+.pagination-danger .jsgrid .jsgrid-pager .jsgrid-pager-page a:hover, .jsgrid .jsgrid-pager .pagination-danger .jsgrid-pager-page a:hover {
+    background: #fc7373;
+    border-color: #fc5a5a;
+    color: #ffffff; }
+
+.pagination-light .page-item.active .page-link, .pagination-light .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-light .active.jsgrid-pager-nav-button .page-link, .pagination-light .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-light .active.jsgrid-pager-page .page-link, .pagination-light .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-light .page-item.active a, .pagination-light .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-light .active.jsgrid-pager-nav-button a,
+.pagination-light .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-light .page-item.active a,
+.pagination-light .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-light .active.jsgrid-pager-page a {
+    background: #aab2bd;
+    border-color: #aab2bd; }
+
+.pagination-light .page-item .page-link:hover, .pagination-light .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link:hover, .jsgrid .jsgrid-pager .pagination-light .jsgrid-pager-nav-button .page-link:hover, .pagination-light .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .pagination-light .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-light .page-item a:hover, .pagination-light .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .pagination-light .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-light .page-item a:hover,
+.pagination-light .jsgrid .jsgrid-pager .jsgrid-pager-page a:hover, .jsgrid .jsgrid-pager .pagination-light .jsgrid-pager-page a:hover {
+    background: #b8bfc8;
+    border-color: #aab2bd;
+    color: #ffffff; }
+
+.pagination-dark .page-item.active .page-link, .pagination-dark .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button .page-link, .jsgrid .jsgrid-pager .pagination-dark .active.jsgrid-pager-nav-button .page-link, .pagination-dark .jsgrid .jsgrid-pager .active.jsgrid-pager-page .page-link, .jsgrid .jsgrid-pager .pagination-dark .active.jsgrid-pager-page .page-link, .pagination-dark .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-dark .page-item.active a, .pagination-dark .jsgrid .jsgrid-pager .active.jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .pagination-dark .active.jsgrid-pager-nav-button a,
+.pagination-dark .page-item.active .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-dark .page-item.active a,
+.pagination-dark .jsgrid .jsgrid-pager .active.jsgrid-pager-page a, .jsgrid .jsgrid-pager .pagination-dark .active.jsgrid-pager-page a {
+    background: #001737;
+    border-color: #001737; }
+
+.pagination-dark .page-item .page-link:hover, .pagination-dark .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-link:hover, .jsgrid .jsgrid-pager .pagination-dark .jsgrid-pager-nav-button .page-link:hover, .pagination-dark .jsgrid .jsgrid-pager .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .pagination-dark .jsgrid-pager-page .page-link:hover, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .pagination-dark .page-item a:hover, .pagination-dark .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .pagination-dark .jsgrid-pager-nav-button a:hover, .jsgrid .jsgrid-pager .jsgrid-pager-page .pagination-dark .page-item a:hover,
+.pagination-dark .jsgrid .jsgrid-pager .jsgrid-pager-page a:hover, .jsgrid .jsgrid-pager .pagination-dark .jsgrid-pager-page a:hover {
+    background: #002251;
+    border-color: #001737;
+    color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */

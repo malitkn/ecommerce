@@ -20,11 +20,21 @@
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="typeEmailX-2">Email</label>
                                 <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control form-control-lg" />
+                                @error('email')
+                                <span
+                                    class="text-danger  animate__animated animate__fadeIn">{{ $message }}
+                            </span>
+                                @enderror
                             </div>
 
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="typePasswordX-2">Password</label>
                                 <input type="password" name="password" id="password" value="{{ old('password') }}" class="form-control form-control-lg" />
+                                @error('password')
+                                <span
+                                    class="text-danger  animate__animated animate__fadeIn">{{ $message }}
+                            </span>
+                                @enderror
                             </div>
 
                             <!-- Checkbox -->

@@ -11,8 +11,9 @@
 <script src=" {{ asset('back/assets/js/off-canvas.js')}}"></script>
 <script src=" {{ asset('back/assets/js/hoverable-collapse.js')}}"></script>
 <script src=" {{ asset('back/assets/js/misc.js')}}"></script>
+
 <!-- endinject -->
-@yield('js')
+@stack('custom-footer')
 <!-- End custom js for this page -->
 <!-- Livewire -->
 @livewireScripts

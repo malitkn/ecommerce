@@ -92,8 +92,8 @@
 
 @endsection
 
-@section('js')
+@push('custom-footer')
     <script src=" {{ asset('back/assets/js/file-upload.js') }} "></script>
-@endsection
+@endpush
 
 

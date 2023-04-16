@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\Auth\OrderController;
+use App\Http\Controllers\Back\CategoryController;
 use App\Http\Controllers\Back\Discount\CouponController;
 use App\Http\Controllers\Back\Orders\OrderStatusController;
 use App\Http\Controllers\Back\PanelController;
 use App\Http\Controllers\Back\Settings\SettingController;
 use App\Http\Controllers\Back\Settings\SocialMediaController;
+use App\Http\Controllers\Back\ContactController as Contact;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\ShopController;
@@ -36,6 +38,7 @@ Route::middleware('auth')->group(function () {
         });
     });
 
+    /* Start /admin */
     Route::middleware('admin')->group(function () {
         Route::prefix('/admin')->name('admin.')->group(function () {
             Route::get('/dashboard', [PanelController::class, 'index'])->name('dashboard');
@@ -56,8 +59,19 @@ Route::middleware('auth')->group(function () {
             Route::prefix('/discount')->name('discount.')->group(function () {
                 Route::get('/coupons', [CouponController::class, 'index'])->name('coupons.index');
             });
+
+            Route::resource('/contacts',Contact::class)->only('index', 'show');
+            Route::get('/contacts/{contact}/reply',[Contact::class, 'reply'])->name('contacts.reply');
+            Route::post('/contacts/{contact}/reply',[Contact::class, 'send'])->name('contacts.send');
+
+            Route::resource('/categories', CategoryController::class);
+        });
+
+        Route::group(['prefix' => 'laravel-filemanager'], function () {
+            \UniSharp\LaravelFilemanager\Lfm::routes();
         });
     });
+    /* End /admin */
 });
 
 require __DIR__ . '/auth.php';

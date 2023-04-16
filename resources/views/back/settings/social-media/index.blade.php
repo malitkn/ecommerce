@@ -1,9 +1,9 @@
 @extends('back.layouts.master')
 @section('title','Sosyal Medya Hesapları')
 
-@section('css')
+@push('custom-head')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-@endsection
+@endpush
 
 @section('content')
 

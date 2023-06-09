@@ -28,12 +28,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (Schema::hasTable('settings')) {
             $settings = Setting::find(1);
             View::composer(['back.*', 'front.*'], function () use ($settings) {
                 View::share('settings', $settings);
             });
-        }
+
 
         Paginator::useBootstrapFour();
     }

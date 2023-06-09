@@ -77,9 +77,10 @@
             </a>
             <div class="collapse" id="product" >
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link " href="#">Blank</a></li>
+                    <li class="nav-item"> <a class="nav-link " href="{{ route('admin.products.index') }}">Ürünler</a></li>
                     <li class="nav-item"> <a class="nav-link " href="{{ route('admin.categories.index') }}">Kategoriler</a></li>
-
+                    <li class="nav-item"> <a class="nav-link " href="{{ route('admin.attributes.index') }}">Özellikler</a></li>
+                    <li class="nav-item"> <a class="nav-link " href="{{ route('admin.attribute-values.index') }}">Özellik Değerleri</a></li>
                 </ul>
             </div>
         </li>

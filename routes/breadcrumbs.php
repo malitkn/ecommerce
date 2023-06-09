@@ -58,7 +58,67 @@ Breadcrumbs::for('contacts', function (BreadcrumbTrail $trail) {
 // Home > Categories
 Breadcrumbs::for('categories', function (BreadcrumbTrail $trail) {
     $trail->parent('dashboard');
-    $trail->push('Kategoriler', route('admin.contacts.index'));
+    $trail->push('Kategoriler', route('admin.categories.index'));
+});
+
+// Home > Categories > Category > Edit
+Breadcrumbs::for('categories.edit', function (BreadcrumbTrail $trail) {
+    $trail->parent('categories');
+    $trail->push('Kategori Düzenle', route('admin.categories.edit', Route::current()->category));
+});
+
+// Home > Categories > Category > Create
+Breadcrumbs::for('categories.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('categories');
+    $trail->push('Kategori Oluştur', route('admin.categories.create'));
+});
+
+// Home > Products
+Breadcrumbs::for('products', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push('Ürünler', route('admin.products.index'));
+});
+
+// Home > Products > Product > Create
+Breadcrumbs::for('products.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('products');
+    $trail->push('Ürün Oluştur', route('admin.products.create'));
+});
+
+// Home > Attributes
+Breadcrumbs::for('attributes', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push('Özellikler', route('admin.attributes.index'));
+});
+
+// Home > Attributes > Create
+Breadcrumbs::for('attributes.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('attributes');
+    $trail->push('Özellik Oluştur', route('admin.attributes.create'));
+});
+
+// Home > Attributes > Edit
+Breadcrumbs::for('attributes.edit', function (BreadcrumbTrail $trail) {
+    $trail->parent('attributes');
+    $trail->push('Özellik Düzenle', route('admin.attributes.edit', Route::current()->attribute));
+});
+
+// Home > Attribute Values
+Breadcrumbs::for('attribute-values', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push('Özellik Değerleri', route('admin.attribute-values.index'));
+});
+
+// Home > Attribute Values > Create
+Breadcrumbs::for('attribute-values.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('attribute-values');
+    $trail->push('Özellik Değeri Oluştur', route('admin.attribute-values.create'));
+});
+
+// Home > Attribute Values > Edit
+Breadcrumbs::for('attribute-values.edit', function (BreadcrumbTrail $trail) {
+    $trail->parent('attribute-values');
+    $trail->push('Özellik Değeri Düzenle', route('admin.attribute-values.edit', Route::current()->attribute_value));
 });
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Back\Orders;
+namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;

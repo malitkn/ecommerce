@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Enums\UserRoleEnum;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
@@ -28,7 +29,8 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
         $request->session()->regenerate();
 
-        if ($request->user()->role == "admin") {
+
+        if ($request->user()->role == UserRoleEnum::ADMIN) {
             toastr()->addSuccess('Başarıyla giriş yaptınız!','Başarılı!');
             return redirect()->intended(RouteServiceProvider::PANEL);
         }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Back\Settings;
+namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Back\SettingRequest;

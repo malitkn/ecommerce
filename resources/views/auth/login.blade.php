@@ -57,3 +57,7 @@
         </div>
     </section>
 @endsection
+@push('scripts')
+    <script src="{{ asset('back/assets/vendors/select2/select2.min.js') }}"></script>
+    <script src="{{ asset('back/assets/js/select2.js') }}"></script>
+@endpush

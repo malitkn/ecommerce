@@ -15,7 +15,7 @@ class input extends Component
      *
      * @return void
      */
-    public function __construct(string $name, string $title)
+    public function __construct(string $name = '', string $title = '')
     {
         $this->name = $name;
         $this->title = $title;

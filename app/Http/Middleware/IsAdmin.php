@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Enums\UserRoleEnum;
 use Closure;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -19,7 +20,7 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user()->role != "admin") {
+        if ($request->user()->role != UserRoleEnum::ADMIN) {
             return redirect()->route('home');
         }
         return $next($request);

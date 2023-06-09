@@ -14,12 +14,12 @@
     <!-- endinject -->
    <!-- Livewire -->
     @livewireStyles
-    <!-- Layout styles -->
-    <link rel="stylesheet" href=" {{ asset('back/assets/css/style.css')}}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('storage/back/images/' . $settings->favicon) }}" />
     <!-- Custom Css -->
     @stack('css')
+    <!-- Layout styles -->
+    <link rel="stylesheet" href=" {{ asset('back/assets/css/style.css')}}">
 </head>
 <body>
 <div class="container-scroller">

@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Attribute;
 use App\Models\Sku;
+use App\Observers\AttributeObserver;
 use App\Observers\SkuObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -30,6 +32,7 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         Sku::observe(SkuObserver::class);
+        Attribute::observe(AttributeObserver::class);
     }
 
     /**

@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('variants', function (Blueprint $table) {
             $table->foreignId('attribute_id')->constrained()->cascadeOnDelete();
             $table->foreignId('sku_id')->constrained()->cascadeOnDelete();
-            $table->string('value');
+            $table->foreignId('attribute_value_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
-            $table->primary(['attribute_id','sku_id']);
+            $table->primary(['attribute_id','sku_id', 'attribute_value_id']);
         });
     }
 

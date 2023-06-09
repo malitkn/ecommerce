@@ -1,3 +1,10 @@
+@props([
+    'id' => '',
+    'title' => '',
+    'name' => '',
+    'message' => '',
+    'value' => '',
+])
 <div>
     <label for="{{ $id }}">{{ $title }}</label>
     <div class="input-group">
@@ -13,5 +20,7 @@
         {{ $message }}
     </span>
     @enderror
-    <div id="holder" class="img-lg" style="margin-top:15px;max-height:100px;">
+    <div id="holder" class="img-lg" style="margin-top:15px;">
+
+    </div>
 </div>

@@ -1,7 +1,8 @@
-              </div>
+                  </div>
+             </div>
          </div>
     </div>
-</div>
+
 
 <!-- plugins:js -->
 <script src=" {{ asset('back/assets/vendors/js/vendor.bundle.base.js')}}"></script>
@@ -13,9 +14,9 @@
 <script src=" {{ asset('back/assets/js/misc.js')}}"></script>
 
 <!-- endinject -->
-@stack('custom-footer')
 <!-- End custom js for this page -->
 <!-- Livewire -->
 @livewireScripts
+@stack('custom-footer')
 </body>
 </html>

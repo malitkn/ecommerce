@@ -5,11 +5,10 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.0.2",
+        "php": "^8.2",
         "diglactic/laravel-breadcrumbs": "^8.1",
         "guzzlehttp/guzzle": "^7.5",
         "laravel/framework": "^9.19",
-        "laravel/horizon": "^5.15",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.11",

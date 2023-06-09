@@ -198,6 +198,43 @@ return array(
                 'confirmButtonColor' => '#fc2003'
             ],
         ],
+
+        'success' => [
+            'type' => 'success',
+            'title' => 'Başarılı',
+        ],
+
+        'category_deleted' => [
+            'type' => 'success',
+            'title' => 'Kategori Silindi',
+            'message' => ':count Ürün etkilendi.',
+        ],
+
+        'confirm_attribute_delete' => [
+            'type' => 'warning',
+            'title' => 'Emin Misiniz ?',
+            'message' => ':attribute Adlı Özellik Silinsin mi ?',
+            'options' => [
+                'showConfirmButton' => true,
+                'showCancelButton' => true,
+                'confirmButtonText' => 'Sil',
+                'cancelButtonText' => 'Vazgeç',
+                'confirmButtonColor' => '#fc2003'
+            ],
+        ],
+
+        'confirm_attribute_value_delete' => [
+            'type' => 'warning',
+            'title' => 'Emin Misiniz ?',
+            'message' => ':attributeValue Adlı Özellik Silinsin mi ?',
+            'options' => [
+                'showConfirmButton' => true,
+                'showCancelButton' => true,
+                'confirmButtonText' => 'Sil',
+                'cancelButtonText' => 'Vazgeç',
+                'confirmButtonColor' => '#fc2003'
+            ],
+        ],
     ],
 
     'themes' => [

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 /**
  * App\Models\Product
@@ -49,9 +50,14 @@ class Product extends Model
 
     protected $guarded = [];
 
-    public function attributes(): HasMany
+    public function productAttributes(): HasMany
     {
-        return $this->hasMany(Attribute::class);
+        return $this->hasMany(ProductAttribute::class);
+    }
+
+    public function attributes(): HasManyThrough
+    {
+        return $this->hasManyThrough(Attribute::class,ProductAttribute::class, 'attribute_id', 'id');
     }
 
 }
